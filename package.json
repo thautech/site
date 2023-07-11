@@ -1,18 +1,23 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^18",
-    "nuxt": "^3.6.1",
-    "nuxt-icon": "^0.4.2"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "scripts": {
+        "reset": "npm cache clean --force && rm -rf ./node_modules && rm package-lock.json",
+        "update": "npx npm-check-updates -u && npm install",
+        "style": "sass ./assets/bootstrap.scss ./public/bootstrap.min.css --style compressed --no-source-map",
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+        "@nuxt/devtools": "latest",
+        "@types/node": "^20",
+        "nuxt": "^3.6.2",
+        "nuxt-icon": "^0.4.2"
+    },
+    "dependencies": {
+        "@nuxtjs/tailwindcss": "^6.8.0"
+    }
 }
