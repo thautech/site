@@ -17,19 +17,19 @@
                         <nav class="list-none mb-10">
                             <li class="mb-2">
                                 <a class="hover:text-white">
-                                    <IconCSS name="bi:envelope" class="mr-2" />
+                                    <i-carbon-email class="inline-block mr-2" />
                                     <span>info@thau.tech</span>
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <a class="hover:text-white">
-                                    <IconCSS name="bi:whatsapp" class="mr-2" />
+                                    <i-carbon-phone class="inline-block mr-2" />
                                     <span>+34 677 470 860</span>
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <a class="hover:text-white">
-                                    <IconCSS name="bi:geo-alt" class="mr-2" />
+                                    <i-carbon-map class="inline-block mr-2" />
                                     <span>Barcelona, Spain</span>
                                 </a>
                             </li>
