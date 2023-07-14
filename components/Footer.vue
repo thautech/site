@@ -17,19 +17,19 @@
                         <nav class="list-none mb-10">
                             <li class="mb-2">
                                 <a class="hover:text-white">
-                                    <i-carbon-email class="inline-block mr-2" />
+                                    <!-- <i-carbon-email class="inline-block mr-2" /> -->
                                     <span>info@thau.tech</span>
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <a class="hover:text-white">
-                                    <i-carbon-phone class="inline-block mr-2" />
+                                    <!-- <i-carbon-phone class="inline-block mr-2" /> -->
                                     <span>+34 677 470 860</span>
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <a class="hover:text-white">
-                                    <i-carbon-map class="inline-block mr-2" />
+                                    <!-- <i-carbon-map class="inline-block mr-2" /> -->
                                     <span>Barcelona, Spain</span>
                                 </a>
                             </li>
@@ -70,10 +70,10 @@
                 </nav>
                 <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                     <a href="https://github.com/thautech" target="_blank">
-                        <IconCSS name="bi:github" class="text-slate-200 text-xl" />
+                        <!-- <IconCSS name="bi:github" class="text-slate-200 text-xl" /> -->
                     </a>
                     <a class="ml-4" href="https://www.linkedin.com/company/thautech" target="_blank">
-                        <IconCSS name="bi:linkedin" class="text-slate-200 text-xl" />
+                        <!-- <IconCSS name="bi:linkedin" class="text-slate-200 text-xl" /> -->
                     </a>
                 </span>
             </div>

@@ -9,13 +9,13 @@
                 <h4>Test 2</h4>
             </div>
             <div class="i-carbon-3d-cursor"></div>
-            <i-carbon-3d-cursor class="block h-4 w-4 text-black" />
-            <text-blue>THAU</text-blue>
+            <!-- <i-carbon-3d-cursor class="block h-4 w-4 text-black" />
+            <text-blue>THAU</text-blue> -->
         </div>
     </section>
 </template>
 
-<script>
-definePageMeta({ layout: "default" });
-</script>
+<!-- <script>
+    definePageMeta({ layout: "default" });
+</script> -->
 
