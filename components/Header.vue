@@ -3,7 +3,7 @@
         <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
 
             <div class="flex items-center">
-                <div @click="toggleNav" class="flex md:hidden mr-4">
+                <div @click="toggleMenu" class="flex md:hidden mr-4">
                     <button type="button" class="menu-toggle">
                         <i-mdi-hamburger-menu class="icon" />
                     </button>
@@ -29,7 +29,7 @@
                             <button @click="showServices = !showServices" class="dropdown-toggle">
                                 <span>SERVICES</span><i-mdi-chevron-down class="icon" />
                             </button>
-                            <div v-show="showServices" class="dropdown-list">
+                            <div v-show="showServices" v-on-click-outside="closeServices" class="dropdown-list">
                                 <nuxt-link to="/" class="dropdown-item">Data Science</nuxt-link>
                                 <nuxt-link to="/" class="dropdown-item">Software Development</nuxt-link>
                                 <nuxt-link to="/" class="dropdown-item">Platform Engineering</nuxt-link>
@@ -42,7 +42,7 @@
                             <button @click="showArticles = !showArticles" class="dropdown-toggle">
                                 <span>ARTICLES</span><i-mdi-chevron-down class="icon" />
                             </button>
-                            <div v-show="showArticles" class="dropdown-list">
+                            <div v-show="showArticles" v-on-click-outside="closeArticles" class="dropdown-list">
                                 <nuxt-link to="/" class="dropdown-item">Data Science</nuxt-link>
                                 <nuxt-link to="/" class="dropdown-item">Software Development</nuxt-link>
                                 <nuxt-link to="/" class="dropdown-item">Platform Engineering</nuxt-link>
@@ -88,16 +88,16 @@
 }
 </style>
 
-<script>
+<script setup lang="ts">
 import { ref } from "vue";
-export default {
-    setup() {
-        let showMenu = ref(false);
-        let showServices = ref(false);
-        let showArticles = ref(false);
-        const toggleNav = () => (showMenu.value = !showMenu.value);
+import { vOnClickOutside } from "@vueuse/components";
 
-        return { showMenu, showServices, showArticles, toggleNav };
-    },
-};
+let showArticles = ref(false);
+let showServices = ref(false);
+let showMenu = ref(false);
+
+const closeArticles = () => (showArticles.value = false);
+const closeServices = () => (showServices.value = false);
+const toggleMenu = () => (showMenu.value = !showMenu.value);
+
 </script>
