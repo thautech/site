@@ -13,7 +13,8 @@
     "devDependencies": {
         "@nuxt/devtools": "latest",
         "@types/node": "^20",
-        "nuxt": "^3.6.2"
+        "@unocss/transformer-directives": "^0.53.5",
+        "nuxt": "^3.6.3"
     },
     "dependencies": {
         "@iconify-json/mdi": "^1.1.53",
