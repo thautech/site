@@ -1,10 +1,11 @@
 <template>
     <section class="container items-center justify-between grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto px-4 py-20">
 
-        <div class="bg-sky-400">
+        <div class="bg-sky-400" :class="{ 'order-last': reverse }">
             <h2>{{ title }}</h2>
             <slot />
         </div>
+
         <div class="bg-slate-200">
             <img :src="image">
         </div>
@@ -16,5 +17,6 @@
 defineProps<{
     title?: string
     image?: string
+    reverse?: boolean
 }>()
 </script>
