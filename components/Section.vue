@@ -1,16 +1,12 @@
 <template>
-    <section class="container flex flex-wrap items-center justify-between mx-auto px-4">
+    <section class="container items-center justify-between grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto px-4 py-20">
 
-        <div>
+        <div class="bg-sky-400">
             <h2>{{ title }}</h2>
-        </div>
-
-        <div>
-            <img :src="image">
-        </div>
-
-        <div>
             <slot />
+        </div>
+        <div class="bg-slate-200">
+            <img :src="image">
         </div>
 
     </section>
