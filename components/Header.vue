@@ -58,7 +58,7 @@
     </nav>
 </template>
 
-<style>
+<style scoped>
 .icon {
     --at-apply: inline-block text-lg align-middle;
 }
