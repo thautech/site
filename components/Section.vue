@@ -1,12 +1,12 @@
 <template>
-    <section class="container items-center justify-between grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto px-4 py-20">
+    <section class="container items-center justify-between grid grid-cols-1 md:grid-cols-2 gap-20 mx-auto px-4 py-20">
 
-        <div class="bg-sky-400" :class="{ 'order-last': reverse }">
-            <h2>{{ title }}</h2>
+        <div :class="{ 'order-last': reverse }">
+            <h3 class="text-3xl leading-normal tracking-wide gradient font-bold">{{ title }}</h3>
             <slot />
         </div>
 
-        <div class="bg-slate-200">
+        <div>
             <img :src="image">
         </div>
 
