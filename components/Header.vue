@@ -1,56 +1,48 @@
 <template>
-    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0" :class="{ dark: scroll }">
         <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
 
             <div class="flex items-center">
                 <div @click="toggleMenu" class="flex md:hidden mr-4">
-                    <button type="button" class="menu-toggle">
-                        <i-mdi-hamburger-menu class="icon" />
+                    <button type="button" class="menu">
+                        <i class="i-carbon-menu icon" :class="{ dark: scroll }"></i>
                     </button>
                 </div>
                 <nuxt-link to="/">
-                    <img src="/images/logo-solid-blue.png" alt="THAU" class="h-12">
+                    <img src="/images/logo-solid-blue.png" alt="THAU" class="h-12" v-if="!scroll">
+                    <img src="/images/logo-solid-white.png" alt="THAU" class="h-12" v-if="scroll">
                 </nuxt-link>
             </div>
 
             <div class="flex items-center md:order-2">
                 <nav class="inline-flex items-center space-x-2">
-                    <a class="text-slate-500 hover:text-slate-900">EN</a>
-                    <span>|</span>
-                    <a class="text-slate-500 hover:text-slate-900">ES</a>
+                    <nuxt-link to="/">
+                        <span class="language" :class="{ dark: scroll }">EN</span>
+                    </nuxt-link>
+                    <span class="text-slate-500">|</span>
+                    <nuxt-link to="/">
+                        <span class="language" :class="{ dark: scroll }">ES</span>
+                    </nuxt-link>
                 </nav>
             </div>
 
             <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
-                <ul class="menu-list">
-                    <li class="menu-item">PURPOSE</li>
-                    <li>
+                <ul class="items">
+                    <li class="item" :class="{ dark: scroll }">PURPOSE</li>
+                    <li class="item" :class="{ dark: scroll }">SERVICES</li>
+                    <!-- <li>
                         <div class="relative">
-                            <button @click="showServices = !showServices" class="dropdown-toggle">
+                            <button @click="showServices = !showServices" class="dropdown">
                                 <span>SERVICES</span><i-mdi-chevron-down class="icon" />
                             </button>
-                            <div v-show="showServices" v-on-click-outside="closeServices" class="dropdown-list">
-                                <nuxt-link to="/" class="dropdown-item">Data Science</nuxt-link>
-                                <nuxt-link to="/" class="dropdown-item">Software Development</nuxt-link>
-                                <nuxt-link to="/" class="dropdown-item">Platform Engineering</nuxt-link>
-                                <nuxt-link to="/" class="dropdown-item">Expert Onboard</nuxt-link>
+                            <div v-show="showServices" v-on-click-outside="closeServices" class="subitems">
+                                <nuxt-link to="/" class="subitem">Data Science</nuxt-link>
+                                <nuxt-link to="/" class="subitem">Software Development</nuxt-link>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="relative">
-                            <button @click="showArticles = !showArticles" class="dropdown-toggle">
-                                <span>ARTICLES</span><i-mdi-chevron-down class="icon" />
-                            </button>
-                            <div v-show="showArticles" v-on-click-outside="closeArticles" class="dropdown-list">
-                                <nuxt-link to="/" class="dropdown-item">Data Science</nuxt-link>
-                                <nuxt-link to="/" class="dropdown-item">Software Development</nuxt-link>
-                                <nuxt-link to="/" class="dropdown-item">Platform Engineering</nuxt-link>
-                                <nuxt-link to="/" class="dropdown-item">Expert Onboard</nuxt-link>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="menu-item">CONTACT</li>
+                    </li> -->
+                    <li class="item" :class="{ dark: scroll }">ARTICLES</li>
+                    <li class="item" :class="{ dark: scroll }">CONTACT</li>
                 </ul>
             </div>
 
@@ -60,44 +52,71 @@
 
 <style scoped>
 .icon {
-    --at-apply: inline-block text-lg align-middle;
+    --at-apply: inline-block text-4xl align-middle;
 }
 
-.menu-toggle {
+.menu {
     --at-apply: text-slate-500 hover:text-gray-400 focus:outline-none focus:text-gray-400;
 }
 
-.menu-list {
+.items {
     --at-apply: flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0;
 }
 
-.menu-item {
+.item {
     --at-apply: font-bold text-slate-500 hover:text-slate-900;
 }
 
-.dropdown-toggle {
-    --at-apply: flex items-center font-bold text-slate-500 hover:text-slate-900;
+.dropdown {
+    --at-apply: flex items-center font-bold text-slate-500 hover:text-slate-700;
 }
 
-.dropdown-list {
+.subitems {
     --at-apply: py-2 mt-2 bg-slate-200 rounded-md shadow-xl lg:absolute lg:right-0 w-50;
 }
 
-.dropdown-item {
+.subitem {
     --at-apply: block px-4 py-2 text-slate-500 hover:bg-slate-300 hover:text-slate-900;
+}
+
+.language {
+    --at-apply: text-slate-500 hover:text-slate-900;
+}
+
+nav.dark {
+    --at-apply: transition duration-500 ease-in-out bg-thau;
+}
+
+i.dark {
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100;
+}
+
+li.dark {
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100;
+}
+
+span.dark {
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100;
 }
 </style>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { vOnClickOutside } from "@vueuse/components";
+// import { vOnClickOutside } from "@vueuse/components";
 
-let showArticles = ref(false);
-let showServices = ref(false);
+// SCROLL
+let scroll = ref(false);
+const roll = () => (scroll.value = window.scrollY > 50);
+onMounted(() => window.addEventListener('scroll', roll))
+
+// MENU
 let showMenu = ref(false);
-
-const closeArticles = () => (showArticles.value = false);
-const closeServices = () => (showServices.value = false);
 const toggleMenu = () => (showMenu.value = !showMenu.value);
+
+// SUBMENUS
+// let showArticles = ref(false);
+// const closeArticles = () => (showArticles.value = false);
+// let showServices = ref(false);
+// const closeServices = () => (showServices.value = false);
 
 </script>
