@@ -28,8 +28,12 @@
 
             <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
                 <ul class="items">
-                    <li class="item" :class="{ dark: scroll }">PURPOSE</li>
-                    <li class="item" :class="{ dark: scroll }">SERVICES</li>
+                    <nuxt-link to="/">
+                        <li class="item" :class="{ dark: scroll }">PURPOSE</li>
+                    </nuxt-link>
+                    <nuxt-link to="/services">
+                        <li class="item" :class="{ dark: scroll }">SERVICES</li>
+                    </nuxt-link>
                     <!-- <li>
                         <div class="relative">
                             <button @click="showServices = !showServices" class="dropdown">
@@ -41,8 +45,12 @@
                             </div>
                         </div>
                     </li> -->
-                    <li class="item" :class="{ dark: scroll }">ARTICLES</li>
-                    <li class="item" :class="{ dark: scroll }">CONTACT</li>
+                    <nuxt-link to="/articles">
+                        <li class="item" :class="{ dark: scroll }">ARTICLES</li>
+                    </nuxt-link>
+                    <nuxt-link to="#about">
+                        <li class="item" :class="{ dark: scroll }">CONTACT</li>
+                    </nuxt-link>
                 </ul>
             </div>
 

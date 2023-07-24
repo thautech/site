@@ -1,6 +1,6 @@
 <template>
-    <Header />
+    <Header id="header" />
     <slot />
-    <About />
-    <Footer />
+    <About id="about" />
+    <Footer id="footer" />
 </template>
