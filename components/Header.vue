@@ -5,7 +5,7 @@
             <div class="flex items-center">
                 <div @click="toggleMenu" class="flex md:hidden mr-4">
                     <button type="button" class="menu">
-                        <i class="i-carbon-menu icon" :class="{ dark: scroll }"></i>
+                        <i class="i-carbon-menu" :class="{ dark: scroll }"></i>
                     </button>
                 </div>
                 <nuxt-link to="/">
@@ -26,7 +26,7 @@
                 </nav>
             </div>
 
-            <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
+            <!-- <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
                 <ul class="items">
                     <nuxt-link to="/">
                         <li class="item" :class="{ dark: scroll }">PURPOSE</li>
@@ -34,17 +34,17 @@
                     <nuxt-link to="/services">
                         <li class="item" :class="{ dark: scroll }">SERVICES</li>
                     </nuxt-link>
-                    <!-- <li>
+                    <li class="item" :class="{ dark: scroll }">
                         <div class="relative">
                             <button @click="showServices = !showServices" class="dropdown">
-                                <span>SERVICES</span><i-mdi-chevron-down class="icon" />
+                                <span>SERVICES</span><i class="i-mdi-chevron-down"></i>
                             </button>
                             <div v-show="showServices" v-on-click-outside="closeServices" class="subitems">
                                 <nuxt-link to="/" class="subitem">Data Science</nuxt-link>
                                 <nuxt-link to="/" class="subitem">Software Development</nuxt-link>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
                     <nuxt-link to="/articles">
                         <li class="item" :class="{ dark: scroll }">ARTICLES</li>
                     </nuxt-link>
@@ -52,59 +52,64 @@
                         <li class="item" :class="{ dark: scroll }">CONTACT</li>
                     </nuxt-link>
                 </ul>
-            </div>
+            </div> -->
 
         </div>
     </nav>
 </template>
 
 <style scoped>
-.icon {
-    --at-apply: inline-block text-4xl align-middle;
+.menu {
+    --at-apply: text-slate-500 hover:text-gray-400 focus:outline-none focus:text-gray-400
 }
 
-.menu {
-    --at-apply: text-slate-500 hover:text-gray-400 focus:outline-none focus:text-gray-400;
+.menu>i {
+    --at-apply: inline-block text-4xl align-middle
 }
 
 .items {
-    --at-apply: flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0;
+    --at-apply: flex-col mt-8 space-y-8 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
 }
 
 .item {
-    --at-apply: font-bold text-slate-500 hover:text-slate-900;
+    --at-apply: font-bold text-slate-500 hover:text-slate-900 my-2
 }
 
 .dropdown {
-    --at-apply: flex items-center font-bold text-slate-500 hover:text-slate-700;
+    --at-apply: flex items-center font-bold text-slate-500 hover:text-slate-700
+}
+
+.dropdown>i {
+    --at-apply: text-2xl align-middle
 }
 
 .subitems {
-    --at-apply: py-2 mt-2 bg-slate-200 rounded-md shadow-xl lg:absolute lg:right-0 w-50;
+    --at-apply: py-2 mt-2 bg-slate-200 rounded-md shadow-xl lg:absolute lg:right-0 w-50
 }
 
 .subitem {
-    --at-apply: block px-4 py-2 text-slate-500 hover:bg-slate-300 hover:text-slate-900;
+    --at-apply: block px-4 py-2 text-slate-500 hover:bg-slate-300 hover:text-slate-900
 }
 
 .language {
-    --at-apply: text-slate-500 hover:text-slate-900;
+    --at-apply: text-slate-500 hover:text-slate-900
 }
 
 nav.dark {
-    --at-apply: transition duration-500 ease-in-out bg-thau;
+    --at-apply: transition duration-500 ease-in-out bg-thau
 }
 
 i.dark {
-    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100;
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
 
-li.dark {
-    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100;
+li.dark,
+li.dark>div>button {
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
 
 span.dark {
-    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100;
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
 </style>
 

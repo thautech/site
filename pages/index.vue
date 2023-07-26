@@ -1,5 +1,8 @@
 <template>
     <Hero />
+    <Purpose />
+    <Workflow />
+    <Contact />
 </template>
 
 <!-- <script>
