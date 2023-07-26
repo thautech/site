@@ -15,15 +15,10 @@
             </div>
 
             <div class="flex items-center md:order-2">
-                <nav class="inline-flex items-center space-x-2">
-                    <nuxt-link to="/">
-                        <span class="language" :class="{ dark: scroll }">EN</span>
-                    </nuxt-link>
-                    <span class="text-slate-500">|</span>
-                    <nuxt-link to="/">
-                        <span class="language" :class="{ dark: scroll }">ES</span>
-                    </nuxt-link>
-                </nav>
+                <select v-model="locale" class="languages" :class="{ dark: scroll }">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
             </div>
 
             <!-- <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
@@ -91,8 +86,8 @@
     --at-apply: block px-4 py-2 text-slate-500 hover:bg-slate-300 hover:text-slate-900
 }
 
-.language {
-    --at-apply: text-slate-500 hover:text-slate-900
+.languages {
+    --at-apply: bg-transparent text-lg text-slate-500 hover:text-slate-900
 }
 
 nav.dark {
@@ -108,7 +103,7 @@ li.dark>div>button {
     --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
 
-span.dark {
+select.dark {
     --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
 </style>
@@ -116,6 +111,9 @@ span.dark {
 <script setup lang="ts">
 import { ref } from "vue";
 // import { vOnClickOutside } from "@vueuse/components";
+
+// I18N
+const { locale } = useI18n();
 
 // SCROLL
 let scroll = ref(false);

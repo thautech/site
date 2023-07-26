@@ -15,7 +15,7 @@
                 Count on us to reach the outcomes faster.
             </p>
             <button class="cta flex flex-col items-center w-full md:w-auto mt-10">
-                TALK TO AN EXPERT
+                {{ $t('hero.cta') }}
             </button>
 
         </div>
