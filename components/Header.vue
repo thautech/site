@@ -15,14 +15,7 @@
             </div>
 
             <div class="flex items-center md:order-2">
-                <NuxtLink v-for="{ code, name } in locales" :key="code" :to="switchLocalePath(code)" class="mr-8">
-                    [{{ name }}]
-                </NuxtLink>
-                <!-- <p>{{ locale }} | {{ locales }}</p> -->
-                <!-- <select v-model="locale" class="languages" :class="{ dark: scroll }">
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                </select> -->
+                <Locale :dark="scroll" />
             </div>
 
             <!-- <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
@@ -90,10 +83,6 @@
     --at-apply: block px-4 py-2 text-slate-500 hover:bg-slate-300 hover:text-slate-900
 }
 
-.languages {
-    --at-apply: bg-transparent text-lg text-slate-500 hover:text-slate-900
-}
-
 nav.dark {
     --at-apply: transition duration-500 ease-in-out bg-thau
 }
@@ -106,20 +95,13 @@ li.dark,
 li.dark>div>button {
     --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
-
-select.dark {
-    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
-}
 </style>
 
 <script setup lang="ts">
 import { ref } from "vue";
 // import { vOnClickOutside } from "@vueuse/components";
 
-// I18N
-// import { useI18n, useLocalePath, useSwitchLocalePath } from '#imports'
-const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
+// LOCALE
 const localePath = useLocalePath()
 
 // SCROLL
