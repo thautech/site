@@ -2,20 +2,16 @@
     <section class="container items-center grid grid-cols-1 lg:grid-cols-2 gap-20 mx-auto px-4 pt-40 pb-20">
         <div class="text-center md:text-left">
             <h2 class="text-4xl leading-normal tracking-wide text-slate-700 font-light">
-                POWER YOUR BUSINESS WITH
+                {{ $t("component.hero.business") }}
             </h2>
             <h2 class="text-4xl leading-normal tracking-wider gradient font-bold">
-                DATA-DRIVEN TECHNOLOGY
+                {{ $t("component.hero.technology") }}
             </h2>
             <p class="text-2xl leading-normal text-slate-500 mt-6">
-                Evaluate the scenario and define objective goals.
-                <br class="hidden xl:inline-flex" />
-                Create what's necessary and empower the people.
-                <br class="hidden xl:inline-flex" />
-                Count on us to reach the outcomes faster.
+                {{ $t("component.hero.description") }}
             </p>
             <button class="cta flex flex-col items-center w-full md:w-auto mt-10">
-                {{ $t('hero.cta') }}
+                {{ $t("component.hero.button") }}
             </button>
 
         </div>
@@ -25,8 +21,8 @@
                     <i class="i-carbon-machine-learning-model"></i>
                 </div>
                 <div class="basis-3/4">
-                    <h3 class="md:pr-40">DATA SCIENCE</h3>
-                    <p>data-lakes, analytics and machine learning design</p>
+                    <h3 class="md:pr-20">{{ $t("component.hero.data.title") }}</h3>
+                    <p>{{ $t("component.hero.data.content") }}</p>
                 </div>
             </div>
             <div class="service">
@@ -34,8 +30,8 @@
                     <i class="i-carbon-devices"></i>
                 </div>
                 <div class="basis-3/4">
-                    <h3 class="md:pr-10">SOFTWARE DEVELOPMENT</h3>
-                    <p>mobile/web apps and systems integrations</p>
+                    <h3 class="md:pr-10">{{ $t("component.hero.software.title") }}</h3>
+                    <p>{{ $t("component.hero.software.content") }}</p>
                 </div>
             </div>
             <div class="service">
@@ -43,8 +39,8 @@
                     <i class="i-carbon-bare-metal-server-02"></i>
                 </div>
                 <div class="basis-3/4">
-                    <h3 class="md:pr-10">PLATFORM ENGINEERING</h3>
-                    <p>cloud optimization and reliability improvement</p>
+                    <h3 class="md:pr-10">{{ $t("component.hero.platform.title") }}</h3>
+                    <p>{{ $t("component.hero.platform.content") }}</p>
                 </div>
             </div>
             <div class="service">
@@ -52,8 +48,8 @@
                     <i class="i-carbon-user-admin"></i>
                 </div>
                 <div class="basis-3/4">
-                    <h3 class="md:pr-20">EXPERTS ONBOARD</h3>
-                    <p>contract support, training and team management</p>
+                    <h3 class="md:pr-20">{{ $t("component.hero.expert.title") }}</h3>
+                    <p>{{ $t("component.hero.expert.content") }}</p>
                 </div>
             </div>
         </div>

@@ -10,28 +10,26 @@
         <div class="container px-4 py-24 mx-auto flex">
             <div
                 class="lg:w-1/3 md:w-1/2 w-full bg-white rounded p-8 flex flex-col md:ml-auto mt-10 md:mt-0 relative z-10 shadow-md">
-                <h2 class="text-slate-900 text-lg mb-1 font-medium title-font">GET IN TOUCH</h2>
+                <h2 class="text-slate-900 text-lg mb-1 font-medium title-font">
+                    {{ $t("component.contact.title") }}
+                </h2>
                 <p class="leading-relaxed mb-5 text-slate-600">
-                    <!-- We are a lean and agile company operating globally online. -->
-                    Digital crafters with artist soul working globally.
+                    {{ $t("component.contact.subtitle") }}
                 </p>
                 <nav class="list-none">
                     <li class="mb-2">
-                        <a href="mailto:info@thau.tech" class="link">
-                            <i class="i-mdi-email-outline"></i>
-                            <span>info@thau.tech</span>
+                        <a href="mailto:info@thau.tech">
+                            <i class="i-mdi-email-outline"></i><span>info@thau.tech</span>
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="https://wa.me/34677470860" class="link">
-                            <i class="i-mdi-whatsapp"></i>
-                            <span>+34 677 470 860</span>
+                        <a href="https://wa.me/34677470860">
+                            <i class="i-mdi-whatsapp"></i><span>+34 677 470 860</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://maps.google.com/maps?q=barcelona+(THAU)&z=10" target="_blank" class="link">
-                            <i class="i-mdi-home-city-outline"></i>
-                            <span>Barcelona, Spain</span>
+                        <a href="https://maps.google.com/maps?q=barcelona+(THAU)&z=10" target="_blank">
+                            <i class="i-mdi-home-city-outline"></i><span>Barcelona, Spain</span>
                         </a>
                     </li>
                 </nav>
@@ -44,11 +42,11 @@
 </template>
 
 <style scoped>
-.link {
+a {
     --at-apply: text-slate-700 hover:font-bold cursor-pointer
 }
 
-.link>i {
+a>i {
     --at-apply: inline-block text-lg align-middle mr-2
 }
 </style>

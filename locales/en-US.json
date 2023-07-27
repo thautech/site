@@ -1,5 +1,81 @@
 {
-    "hero": {
-        "cta": "TALK TO AN EXPERT"
+    "component": {
+        "about": {
+            "title": "ABOUT",
+            "content": "Our purpose is to make the world a better place through technology. We believe that empowered people and knowledge-driven systems are drivers of smarter attitudes. We are a lean and agile company operating globally online.",
+            "social": "SOCIAL",
+            "links": "LINKS",
+            "policy": "Privacy Policy",
+            "terms": "Terms of Use"
+        },
+        "contact": {
+            "title": "GET IN TOUCH",
+            "subtitle": "Digital crafters with artist soul working globally."
+        },
+        "header": {
+            "purpose": "PURPOSE",
+            "services": "SERVICES",
+            "articles": "ARTICLES",
+            "contact": "CONTACT"
+        },
+        "hero": {
+            "business": "POWER YOUR BUSINESS WITH",
+            "technology": "DATA-DRIVEN TECHNOLOGY",
+            "description": "Evaluate the scenario and define objective goals. Then create what's necessary and empower the people. Always count on us to reach the outcomes faster.",
+            "button": "TALK TO AN EXPERT",
+            "data": {
+                "title": "DATA SCIENCE",
+                "content": "data-lakes, analytics and machine learning design"
+            },
+            "software": {
+                "title": "SOFTWARE DEVELOPMENT",
+                "content": "mobile/web apps and systems integrations"
+            },
+            "platform": {
+                "title": "PLATFORM ENGINEERING",
+                "content": "cloud optimization and reliability improvement"
+            },
+            "expert": {
+                "title": "EXPERTS ONBOARD",
+                "content": "contract support, training and team management"
+            }
+        },
+        "purpose": {
+            "title": "Make the world a better place through technology",
+            "subtitle": "We believe that empowered people and knowledge-driven systems are drivers of smarterattitudes.",
+            "excel": {
+                "title": "Personal Excellence",
+                "content": "We encourage and support our team to strive for their best performance, continuous learning, and growth, fostering a culture of individual accountability and achievement to collectively drive success."
+            },
+            "share": {
+                "title": "Knowledge Share",
+                "content": "Involves promoting a culture of open communication, collaboration, and the voluntary exchange of expertise, insights, and information among people, leading to collective learning, innovation, and overall growth."
+            },
+            "enjoy": {
+                "title": "Work Enjoyment",
+                "content": "An environment that fosters team satisfaction and engagement by aligning tasks with individual strengths, recognizing achievements, and promoting a healthy work-life balance, overall well-being and productivity."
+            }
+        },
+        "workflow": {
+            "title": "WORKFLOW",
+            "description": "We execute projects with design thinking principles and agile methodology by default with frequent feedback to adapt and improve the product throughout its development lifecycle.",
+            "explanation": "Normally, we segment the execution of projects into four independent phases, with validation in each one. This strategy allows learning and delivering results more efficiently, keeping everyone involved aligned and mitigating unnecessary risks.",
+            "concept": {
+                "title": "PROOF OF CONCEPT",
+                "content": "Concise demonstration that validates the feasibility or functionality of a requirement in a specific scenario and preliminary manner."
+            },
+            "product": {
+                "title": "MINIMUM VIABLE PRODUCT",
+                "content": "Most basic version of a product that contains enough features to satisfy early customers and gather valuable feedback for further development."
+            },
+            "training": {
+                "title": "TRAINING AND OPERATION",
+                "content": "Instruct individuals to acquire the necessary skills to effectively utilize and maintain the system while execute the go live of the feature."
+            },
+            "extension": {
+                "title": "EXTENSIONS AND OPTIMIZATIONS",
+                "content": "Implement new features to enhance scope and improve the efficiency and performance of existing functionalities."
+            }
+        }
     }
 }

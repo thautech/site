@@ -1,5 +1,81 @@
 {
-    "hero": {
-        "cta": "HABLAR CON UN EXPERTO"
+    "component": {
+        "about": {
+            "title": "SOBRE",
+            "content": "Nuestro propósito es hacer del mundo un lugar mejor a través de la tecnología. Creemos que las personas empoderadas y los sistemas basados en el conocimiento son impulsores de actitudes más inteligentes. Somos una empresa esbelta y ágil que opera globalmente en línea.",
+            "social": "SOCIAL",
+            "links": "LINKS",
+            "policy": "Política de Privacidad",
+            "terms": "Condiciones de Uso"
+        },
+        "contact": {
+            "title": "PONERSE EN CONTACTO",
+            "subtitle": "Artesanos digitales con alma de artista que trabajan a nivel mundial."
+        },
+        "header": {
+            "purpose": "PROPÓSITO",
+            "services": "SERVICIOS",
+            "articles": "ARTÍCULOS",
+            "contact": "CONTACTO"
+        },
+        "hero": {
+            "business": "POTENCIA TU NEGOCIO CON",
+            "technology": "TECNOLOGÍA IMPULSADA POR DATOS",
+            "description": "Evaluar el escenario y definir metas objetivas. Luego crea lo que sea necesario y empodera a la gente. Cuente siempre con nosotros para alcanzar los resultados más rápido.",
+            "button": "HABLAR CON UN EXPERTO",
+            "data": {
+                "title": "CIENCIA DE LOS DATOS",
+                "content": "lagos de datos, análisis y diseño de aprendizaje automático"
+            },
+            "software": {
+                "title": "DESARROLLO DE SOFTWARE",
+                "content": "aplicaciones móviles/web y integraciones de sistemas"
+            },
+            "platform": {
+                "title": "INGENIERÍA DE PLATAFORMAS",
+                "content": "optimización de la nube y mejora de la confiabilidad"
+            },
+            "expert": {
+                "title": "EXPERTOS A BORDO",
+                "content": "soporte para contratación, formación y gestión de equipos"
+            }
+        },
+        "purpose": {
+            "title": "Hacer del mundo un lugar mejor a través de la tecnología",
+            "subtitle": "Creemos que las personas empoderadas y los sistemas basados en el conocimiento son impulsores de actitudes inteligentes.",
+            "excel": {
+                "title": "Excelencia Personal",
+                "content": "Alentamos y apoyamos a nuestro equipo para que luche por su mejor desempeño, aprendizaje continuo y crecimiento, fomentando una cultura de responsabilidad y logros individuales para impulsar el éxito de manera colectiva."
+            },
+            "share": {
+                "title": "Compartir Conocimiento",
+                "content": "Implica promover una cultura de comunicación abierta, colaboración y el intercambio voluntario de experiencia, conocimientos e información entre las personas, lo que conduce al aprendizaje colectivo, la innovación y el crecimiento general."
+            },
+            "enjoy": {
+                "title": "Disfrute del Trabajo",
+                "content": "Un entorno que fomenta la satisfacción y el compromiso del equipo alineando las tareas con las fortalezas individuales, reconociendo los logros y promoviendo un equilibrio saludable entre el trabajo y la vida personal, el bienestar general y la productividad."
+            }
+        },
+        "workflow": {
+            "title": "FLUJO DE TRABAJO",
+            "description": "Ejecutamos proyectos con principios de pensamiento de diseño y metodología ágil por defecto con retroalimentación frecuente para adaptar y mejorar el producto a lo largo de su ciclo de vida de desarrollo.",
+            "explanation": "Normalmente, segmentamos la ejecución de los proyectos en cuatro fases independientes, con validación en cada una de ellas. Esta estrategia permite aprender y entregar resultados de manera más eficiente, manteniendo alineados a todos los involucrados y mitigando riesgos innecesarios.",
+            "concept": {
+                "title": "PRUEBA DE CONCEPTO",
+                "content": "Demostración concisa que valida la factibilidad o funcionalidad de un requerimiento en un escenario específico y de manera preliminar."
+            },
+            "product": {
+                "title": "PRODUCTO MÍNIMO VIABLE",
+                "content": "La versión más básica de un producto que contiene suficientes funciones para satisfacer a los primeros clientes y recopilar comentarios valiosos para un mayor desarrollo."
+            },
+            "training": {
+                "title": "ENTRENAMIENTO Y OPERACIÓN",
+                "content": "Indique a las personas que adquieran las habilidades necesarias para utilizar y mantener el sistema de manera efectiva mientras ejecutan la función."
+            },
+            "extension": {
+                "title": "EXTENSIONES Y OPTIMIZACIONES",
+                "content": "Implemente nuevas características para ampliar el alcance y mejorar la eficiencia y el rendimiento de las funcionalidades existentes."
+            }
+        }
     }
 }

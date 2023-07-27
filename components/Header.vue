@@ -15,34 +15,47 @@
             </div>
 
             <div class="flex items-center md:order-2">
-                <Locale :dark="scroll" />
+                <select @change="onLocale" :value="locale" :class="{ dark: scroll }">
+                    <option v-for="{ code, name } in (locales as LocaleObject[])" :key="code" :value="code">
+                        {{ name }}
+                    </option>
+                </select>
             </div>
 
             <!-- <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
                 <ul class="items">
-                    <nuxt-link to="/">
-                        <li class="item" :class="{ dark: scroll }">PURPOSE</li>
+                    <nuxt-link :to="localePath('/')">
+                        <li class="item" :class="{ dark: scroll }">
+                            {{ $t("component.header.purpose") }}
+                        </li>
                     </nuxt-link>
-                    <nuxt-link to="/services">
-                        <li class="item" :class="{ dark: scroll }">SERVICES</li>
+                    <nuxt-link :to="localePath('/services')">
+                        <li class="item" :class="{ dark: scroll }">
+                            {{ $t("component.header.services") }}
+                        </li>
+                    </nuxt-link>
+                    <nuxt-link :to="localePath('/articles')">
+                        <li class="item" :class="{ dark: scroll }">
+                            {{ $t("component.header.articles") }}
+                        </li>
+                    </nuxt-link>
+                    <nuxt-link :to="localePath('#about')">
+                        <li class="item" :class="{ dark: scroll }">
+                            {{ $t("component.header.contact") }}
+                        </li>
                     </nuxt-link>
                     <li class="item" :class="{ dark: scroll }">
                         <div class="relative">
                             <button @click="showServices = !showServices" class="dropdown">
-                                <span>SERVICES</span><i class="i-mdi-chevron-down"></i>
+                                <span>{{ $t("component.header.services") }}</span>
+                                <i class="i-mdi-chevron-down"></i>
                             </button>
                             <div v-show="showServices" v-on-click-outside="closeServices" class="subitems">
-                                <nuxt-link to="/" class="subitem">Data Science</nuxt-link>
-                                <nuxt-link to="/" class="subitem">Software Development</nuxt-link>
+                                <nuxt-link :to="localePath('/')" class="subitem">One</nuxt-link>
+                                <nuxt-link :to="localePath('/')" class="subitem">Two</nuxt-link>
                             </div>
                         </div>
                     </li>
-                    <nuxt-link to="/articles">
-                        <li class="item" :class="{ dark: scroll }">ARTICLES</li>
-                    </nuxt-link>
-                    <nuxt-link to="#about">
-                        <li class="item" :class="{ dark: scroll }">CONTACT</li>
-                    </nuxt-link>
                 </ul>
             </div> -->
 
@@ -95,14 +108,31 @@ li.dark,
 li.dark>div>button {
     --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
 }
+
+select {
+    --at-apply: bg-transparent text-lg text-slate-500 hover:text-slate-900
+}
+
+select.dark {
+    --at-apply: transition duration-500 ease-in-out text-slate-300 hover:text-slate-100
+}
 </style>
 
 <script setup lang="ts">
 import { ref } from "vue";
-// import { vOnClickOutside } from "@vueuse/components";
 
 // LOCALE
+import { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 const localePath = useLocalePath()
+const router = useRouter()
+
+function onLocale(event: Event) {
+    const target = event.target as HTMLInputElement
+    router.push({ path: switchLocalePath(target.value) })
+}
 
 // SCROLL
 let scroll = ref(false);
@@ -114,6 +144,7 @@ let showMenu = ref(false);
 const toggleMenu = () => (showMenu.value = !showMenu.value);
 
 // SUBMENUS
+// import { vOnClickOutside } from "@vueuse/components";
 // let showArticles = ref(false);
 // const closeArticles = () => (showArticles.value = false);
 // let showServices = ref(false);
