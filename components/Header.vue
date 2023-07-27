@@ -15,10 +15,14 @@
             </div>
 
             <div class="flex items-center md:order-2">
-                <select v-model="locale" class="languages" :class="{ dark: scroll }">
+                <NuxtLink v-for="{ code, name } in locales" :key="code" :to="switchLocalePath(code)" class="mr-8">
+                    [{{ name }}]
+                </NuxtLink>
+                <!-- <p>{{ locale }} | {{ locales }}</p> -->
+                <!-- <select v-model="locale" class="languages" :class="{ dark: scroll }">
                     <option value="en">English</option>
                     <option value="es">Español</option>
-                </select>
+                </select> -->
             </div>
 
             <!-- <div class="items-center w-full md:flex md:w-auto md:order-1" :class="showMenu ? 'flex' : 'hidden'">
@@ -113,7 +117,10 @@ import { ref } from "vue";
 // import { vOnClickOutside } from "@vueuse/components";
 
 // I18N
-const { locale } = useI18n();
+// import { useI18n, useLocalePath, useSwitchLocalePath } from '#imports'
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const localePath = useLocalePath()
 
 // SCROLL
 let scroll = ref(false);
