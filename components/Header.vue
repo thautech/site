@@ -137,7 +137,7 @@ function onLocale(event: Event) {
 // SCROLL
 let scroll = ref(false);
 const roll = () => (scroll.value = window.scrollY > 50);
-onMounted(() => window.addEventListener('scroll', roll))
+onMounted(() => window.addEventListener('scroll', roll, { passive: true }))
 
 // MENU
 let showMenu = ref(false);
