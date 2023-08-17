@@ -1,11 +1,11 @@
 <template>
     <section class="container items-center grid grid-cols-1 lg:grid-cols-2 gap-20 mx-auto px-4 pt-40 pb-20">
         <div class="text-center md:text-left">
-            <h2 class="text-4xl leading-normal tracking-wide text-slate-700 font-light">
-                {{ $t("component.hero.business") }}
-            </h2>
             <h2 class="text-4xl leading-normal tracking-wider gradient font-bold">
                 {{ $t("component.hero.technology") }}
+            </h2>
+            <h2 class="text-4xl leading-normal tracking-wide text-slate-700 font-light">
+                {{ $t("component.hero.business") }}
             </h2>
             <p class="text-2xl leading-normal text-slate-500 mt-6">
                 {{ $t("component.hero.description") }}
